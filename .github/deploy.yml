@@ -12,14 +12,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v2
 
-    - name: Run Playwright Integration Tests
-      run: |
-        echo "npm install"
-        echo "npm run test"
+      - name: Run Playwright Integration Tests
+        run: |
+          echo "npm install"
+          echo "npm run test"
 
-    - name: Deploy to Environment
-      run: |
-        echo "Deploying to ${{ github.event.inputs.environment }}"
+      - name: Deploy to Environment
+        run: |
+          echo "Deploying to ${{ github.event.inputs.environment }}"
